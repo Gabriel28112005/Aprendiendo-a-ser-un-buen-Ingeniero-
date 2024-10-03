@@ -13,11 +13,12 @@ De manera más esquemática podemos decirlo de la siguiente manera:
 -	C(7) = (2, 6)
 -	C(8) = (1, 3)
 -	C(9) = (2, 4)
+
 De esta forma, si sumamos todos los caminos anteriores desde todos los números del tablero, podemos calcular el número de posibilidades que se pueden optar con un único movimiento: 2+2+2+3+0+3+2+2+2+2=20 (concordando con la información que nos aporta el enunciado).
 Una vez calculado el número de movimientos posibles con un movimiento, debemos calcular las posibilidades al hacer dos movimientos. Para ello debemos imaginarnos que tenemos un conjunto de posibilidades (M) la cual recoge la posición de la que iniciamos (n), y el número de movimientos restantes que tenemos (N). Con ello podemos decir el número de posibilidades desde, por ejemplo, el 0 al usar 2 movimientos de la siguiente manera: M(0,2)=M(4,1)+M(6,1)=3 (posibilidades) + 3(posibilidades)=6 posibilidades. El número de caminos desde el 1 con dos movimientos sería: M(1,2)=M(6,1)+M(8,1)=3 (caminos)+2 (caminos)=5 caminos. De esta forma podemos calcular la cantidad de posibilidades que hay con dos movimientos con el resto de números faltantes. Una vez hecho eso, al sumarlo nos da como resultado un total de 46 posibilidades al usar dos movimientos (coincidiendo con los datos dados en el enunciado).
 Siguiendo la misma idea de antes, nos fijamos que la fórmula que usamos para calcular los posibles caminos se puede expresar de la siguiente manera:
 
-![a86a355a-cb18-4c92-9319-9a6d1881d9a2](https://github.com/user-attachments/assets/3092c011-899c-4c1f-ac40-db398690e885)
+![Imagen1](https://github.com/user-attachments/assets/db3f1d22-bcf5-4dbf-b0e5-c4d1a75d33bb)
 
 Una vez descifrada la fórmula que relaciona nuestros caminos posibles con nuestra posición inicial y el número de movimientos restantes, podemos calcular el resto de las posibilidades que nos pide averiguar el problema planteado. De esta forma sabemos que para 3 movimientos hay 104 posibilidades, para 5 hay 544, para 8 hay 6576, para 10 hay 34432, para 15 hay 2140672, para 18 hay 25881088, para 21 hay 307302400, para 23 hay 1609056256 y para 32 hay 2792668987392.
 Resumidamente, sacamos en conclusión lo siguiente:
